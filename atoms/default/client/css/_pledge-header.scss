@@ -60,6 +60,7 @@
     position: relative;
     padding-top: 216px;
     padding-bottom: 8px;
+    margin-bottom: 8px;
     font-size: 40px;
     line-height: 115%;
     font-family: "Guardian Titlepiece","Guardian Headline Full","Guardian Headline","Guardian Egyptian Web",Georgia,serif;
@@ -138,20 +139,39 @@
   }
   &__social {
     display: none;
-    @include mq(desktop) {
+    @include mq(tablet) {
       display: block;
       .ios &,
       .android & {
         display: none;
       }
     }
-    div {
-      display: inline-block;
-      margin-right: 8px;
-      width: 44px;
-      height: 44px;
+    .social__item {
+      cursor: default;
+    }
+    .social__action {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 6px;
+      width: 42px;
+      height: 42px;
       border: 1px solid #121212;
       border-radius: 100%;
+      .inline-icon {
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+        path {
+          fill: #121212;
+        }
+      }
+      &:hover {
+        background-color: #121212;
+        svg path {
+          fill: #fff;
+        }
+      }
     }
   }
 
