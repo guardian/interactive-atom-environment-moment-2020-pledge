@@ -1,0 +1,139 @@
+.brand-header {
+  .ios &,
+  .android & {
+    display: none;
+  }
+  background-color: #052962;
+  &__inner {
+    padding: 0 10px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    @include mq(mobileLandscape) {
+      padding: 0 20px;
+    }
+    @include mq(tablet) {
+      width: 740px;
+      padding: 0;
+      margin: 0 auto;
+      align-items: flex-start;
+    }
+    @include mq(desktop) {
+      width: 980px;
+    }
+    @include mq(leftCol) {
+      width: 1140px;
+    }
+    @include mq(wide) {
+      width: 1300px;
+    }
+  }
+  &__logo {
+    padding: 8px 0 14px;
+    width: 150px;
+    height: 48px;
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    @include mq(tablet) {
+      width: 224px;
+      height: 72px;
+      padding-top: 4px;
+    }
+    @include mq(desktop) {
+      width: 298px;
+      height: 96px;
+      padding-top: 10px;
+    }
+  }
+  &__ask {
+    &__heading,
+    &__subheading,
+    &__buttons__button.subscribe {
+      display: none;
+      @include mq(tablet) {
+        display: flex;
+      }
+    }
+    &__heading,
+    &__subheading {
+    }
+    &__heading {
+      font-family: "Guardian Headline", "Guardian Egyptian Web", Georgia;
+      color: #FFE500;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 22px;
+      margin-top: 4px;
+      @include mq(desktop) {
+        font-size: 34px;
+        line-height: 36px;
+        margin-top: 8px;
+      }
+    }
+    &__subheading {
+      font-family: "Guardian Text Sans Web","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+      color: #fff;
+      font-size: 16px;
+      line-height: 16px;
+      margin-bottom: 6px;
+      @include mq(desktop) {
+        margin-bottom: 8px;
+        margin-top: 4px;
+      }
+    }
+    &__buttons {
+      display: flex;
+      flex-direction: row;
+      &__button {
+        height: 36px;
+        padding: 0 16px 0 16px;
+        margin-bottom: 15px;
+        background-color: #ffe500;
+        border-radius: 36px;
+        display: flex;
+        align-items: center;
+        color: #052962;
+        @include mq(tablet) {
+          margin-bottom: 8px;
+        }
+        @include mq(desktop) {
+          margin-bottom: 12px;
+        }
+        .label,
+        .icon {
+          margin: 0;
+          align-items: center;
+        }
+        .label {
+          display: flex;
+          font-family: "Guardian Text Sans Web","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+          font-weight: bold;
+          font-size: 17px;
+          line-height: 20px;
+        }
+        .icon {
+          margin-left: 10px;
+          margin-right: -10px;
+          display: none;
+          @include mq(tablet) {
+            display: flex;
+          }
+          svg {
+            display: block;
+          }
+        }
+        &.contribute {
+
+        }
+        &.subscribe {
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+}

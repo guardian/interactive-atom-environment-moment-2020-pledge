@@ -1,0 +1,159 @@
+.pledge-header {
+  max-width: 100%;
+  overflow: hidden;
+  &__inner {
+    padding: 0 10px;
+    position: relative;
+    @include mq(mobileLandscape) {
+      padding: 0 20px;
+    }
+    @include mq(tablet) {
+      width: 740px;
+      padding: 0;
+      margin: 0 auto;
+    }
+    @include mq(desktop) {
+      width: 980px;
+    }
+    @include mq(leftCol) {
+      width: 1140px;
+    }
+    @include mq(wide) {
+      width: 1300px;
+    }
+
+  }
+  &__earth {
+    width: 620px;
+    height: 620px;
+    position: absolute;
+    left: 50%;
+    top: -430px;
+    transform: translateX(-50%);
+    z-index: -1;
+    @include mq(tablet) {
+      transform: none;
+      top: -193px;
+      left: 462px;
+      z-index: 1;
+    }
+    @include mq(desktop) {
+      top: -324px;
+      left: 696px;
+      width: 878px;
+      height: 878px;
+    }
+    &__globe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      &.layer-b {
+        opacity: 0.6;
+        @supports (mix-blend-mode: screen) {
+          mix-blend-mode: screen;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &__headline {
+    position: relative;
+    padding-top: 216px;
+    padding-bottom: 8px;
+    font-size: 40px;
+    line-height: 115%;
+    font-family: "Guardian Titlepiece","Guardian Headline Full","Guardian Headline","Guardian Egyptian Web",Georgia,serif;
+    @include mq(tablet) {
+      font-size: 64px;
+      padding-top: 0;
+    }
+    @include mq(desktop) {
+      font-size: 96px;
+    }
+    &__top {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      padding-bottom: 7px;
+      &__pen {
+        width: 30px;
+        margin-right: 0.15em;
+        @include mq(tablet) {
+          width: 84px;
+          margin-right: -2px;
+          margin-left: -12px;
+        }
+      }
+      &__year {
+        color: #333;
+        line-height: 0.85;
+        @include mq(tablet) {
+          font-size: 80px;
+        }
+        @include mq(desktop) {
+          font-size: 130px;
+        }
+      }
+    }
+
+    &__main {
+      padding-bottom: 0.08em;
+      @include mq(tablet) {
+        padding-bottom: 0.18em;
+      }
+      @include mq(desktop) {
+        padding-bottom: 0.24em;
+      }
+      @supports (-webkit-background-clip: text) {
+        // color: teal;
+        background: #c70000;
+        background: linear-gradient(90deg, rgba(7,74,173,1) 0%, rgba(0,127,136,1) 15%, rgba(57,120,95,1) 26%, rgba(161,105,19,1) 44%, rgba(188,96,1,1) 51%, rgba(194,48,1,1) 65%, rgba(136,53,55,1) 78%, rgba(7,74,173,1) 100%);
+        background: linear-gradient(117deg, rgba(7,74,173,1) 0%, rgba(0,127,136,1) 15%, rgba(57,120,95,1) 26%, rgba(161,105,19,1) 44%, rgba(188,96,1,1) 51%, rgba(194,48,1,1) 65%, rgba(136,53,55,1) 78%, rgba(7,74,173,1) 100%);
+        background-size: 42em;
+        background-position: 1em;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      height: 4.85em;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: repeating-linear-gradient(
+        rgba(255,0,0,0),
+        rgba(255,0,0,0) calc(1.15em),
+       $neutral-86 calc(1.15em),
+        $neutral-86 calc(1.15em + 1px),
+        rgba(0,0,0,0) calc(1.15em + 1px)
+      );
+
+    }
+
+
+  }
+  &__social {
+    display: none;
+    @include mq(desktop) {
+      display: block;
+      .ios &,
+      .android & {
+        display: none;
+      }
+    }
+    div {
+      display: inline-block;
+      margin-right: 8px;
+      width: 44px;
+      height: 44px;
+      border: 1px solid #121212;
+      border-radius: 100%;
+    }
+  }
+
+}
+
