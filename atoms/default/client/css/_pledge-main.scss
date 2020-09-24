@@ -1,0 +1,76 @@
+.pledge-main {
+  margin-top: 24px;
+
+  &__content {
+    position: relative;
+    padding-top: 24px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 16px;
+      background: repeating-linear-gradient(
+        $neutral-86,
+        $neutral-86 1px,
+        rgba(255,0,0,0) 1px,
+        rgba(255,0,0,0) 5px,
+        $neutral-86 5px
+      );
+    }
+
+    p, li {
+      font-size: 17px;
+      line-height: 24px;
+      margin-bottom: 24px;
+      // max-width: 740px;
+    }
+    ul {
+      margin: 0;
+      @include mq(desktop) {
+        column-count: 2;
+        column-gap: 40px;
+      }
+      li {
+        list-style-type: none;
+        break-inside: avoid;
+        &:before {
+          content: '';
+          display: block;
+          width: 140px;
+          height: 1px;
+          background-color: $neutral-86;
+          margin-bottom: 6px;
+          @include mq(tablet) {
+            width: 50%;
+          }
+        }
+        strong {
+          font-family: "Guardian Headline", "Guardian Egyptian Web", Georgia;
+          display: block;
+          font-weight: 700;
+          font-size: 20px;
+          margin-bottom: 6px;
+          @include mq(tablet) {
+            font-size: 24px;
+            line-height: 30px;
+          }
+          & + br {
+            display: none;
+          }
+
+        }
+      }
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+    em {
+      background-color: #ffe500;
+      padding: 2px 4px;
+      font-style: normal;
+      font-weight: bold;
+    }
+  }
+}

@@ -5,29 +5,12 @@
   }
   background-color: #052962;
   &__inner {
-    padding: 0 10px;
-    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    @include mq(mobileLandscape) {
-      padding: 0 20px;
-    }
     @include mq(tablet) {
-      width: 740px;
-      padding: 0;
-      margin: 0 auto;
       align-items: flex-start;
-    }
-    @include mq(desktop) {
-      width: 980px;
-    }
-    @include mq(leftCol) {
-      width: 1140px;
-    }
-    @include mq(wide) {
-      width: 1300px;
     }
   }
   &__logo {

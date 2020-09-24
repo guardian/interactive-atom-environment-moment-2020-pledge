@@ -1,0 +1,34 @@
+body > .element.element-atom:first-of-type {
+  background-color: #fff;
+  padding-bottom: 120px;
+  border-bottom: 120px solid #052962;
+  margin: 0;
+}
+
+.brand-header,
+.pledge-main,
+.pledge-header,
+.support-and-share,
+.read-more {
+  &__inner {
+    padding: 0 10px;
+    position: relative;
+    @include mq(mobileLandscape) {
+      padding: 0 20px;
+    }
+    @include mq(tablet) {
+      width: 700px;
+      // padding: 0;
+      margin: 0 auto;
+    }
+    @include mq(desktop) {
+      width: 940px;
+    }
+    @include mq(leftCol) {
+      width: 1100px;
+    }
+    @include mq(wide) {
+      width: 1260px;
+    }
+  }
+}

@@ -1,28 +1,6 @@
 .pledge-header {
   max-width: 100%;
   overflow: hidden;
-  &__inner {
-    padding: 0 10px;
-    position: relative;
-    @include mq(mobileLandscape) {
-      padding: 0 20px;
-    }
-    @include mq(tablet) {
-      width: 740px;
-      padding: 0;
-      margin: 0 auto;
-    }
-    @include mq(desktop) {
-      width: 980px;
-    }
-    @include mq(leftCol) {
-      width: 1140px;
-    }
-    @include mq(wide) {
-      width: 1300px;
-    }
-
-  }
   &__earth {
     width: 620px;
     height: 620px;
@@ -30,16 +8,16 @@
     left: 50%;
     top: -430px;
     transform: translateX(-50%);
-    z-index: -1;
+    z-index: 0;
     @include mq(tablet) {
       transform: none;
       top: -193px;
-      left: 462px;
+      left: 482px;
       z-index: 1;
     }
     @include mq(desktop) {
       top: -324px;
-      left: 696px;
+      left: 716px;
       width: 878px;
       height: 878px;
     }
@@ -144,33 +122,6 @@
       .ios &,
       .android & {
         display: none;
-      }
-    }
-    .social__item {
-      cursor: default;
-    }
-    .social__action {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-right: 6px;
-      width: 42px;
-      height: 42px;
-      border: 1px solid #121212;
-      border-radius: 100%;
-      .inline-icon {
-        background-color: transparent;
-        width: 100%;
-        height: 100%;
-        path {
-          fill: #121212;
-        }
-      }
-      &:hover {
-        background-color: #121212;
-        svg path {
-          fill: #fff;
-        }
       }
     }
   }
