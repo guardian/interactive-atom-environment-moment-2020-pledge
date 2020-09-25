@@ -2,24 +2,25 @@ const jsonLink = 'https://interactive.guim.co.uk/docsdata-test/1h3S_adTVe3zUjw6y
 
 loadJSON(jsonLink, function (rawData) {
   const data = rawData.sheets['Sheet1'];
+  const linksEl = document.querySelector('.read-more__links');
   data.forEach((d) => {
-    addArticle(d);
+    const articleEl = createArticleEl(d);
+    console.log(articleEl);
+    linksEl.appendChild(articleEl);
   })
 });
 
 
-function addArticle(data) {
-  console.log(data.Headline);
-  console.log(data.Author);
-  console.log(data.Title);
-  console.log(data.Photo);
-  console.log(data.Link);
+function createArticleEl(data) {
+  let articleEl = document.createElement('div');
+  articleEl.classList.add('read-more__links__link');
+  articleEl.innerHTML = `<div class="headline">${data.Headline}</div><div class="byline"><div class="byline__author">${data.Author}</div><div class="byline__about">${data.Title}</div></div><img class="picture"><div class="more">Read more</div><a class="link" href='${data.Link}'></a>`;
 
   if (data.Photo) {
-    console.log('has photo', data.Photo)
-  } else {
-    console.log('no photo', '—')
+    articleEl.querySelector('img').setAttribute('src', data.Photo);
   }
+
+  return articleEl;
 }
 
 function loadJSON(path, success, error) {
