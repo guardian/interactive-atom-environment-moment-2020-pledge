@@ -46,7 +46,10 @@
       }
     }
     &__sheet {
-      display: block;
+      display: none;
+      &.can-share {
+        display: block;
+      }
       position: absolute;
       right: 8px;
       top: 8px;
