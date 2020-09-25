@@ -1,8 +1,11 @@
-body > .element.element-atom:first-of-type {
-  background-color: #fff;
-  padding-bottom: 120px;
-  border-bottom: 120px solid #052962;
-  margin: 0;
+body {
+  background-color: #041F4A;
+  & > .element.element-atom:first-of-type {
+    background-color: #fff;
+    padding-bottom: 100px;
+    border-bottom: 100px solid #052962;
+    margin: 0;
+  }
 }
 
 .brand-header,

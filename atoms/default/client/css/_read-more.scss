@@ -1,3 +1,148 @@
 .read-more {
+  font-family: "Guardian Headline", "Guardian Egyptian Web", Georgia;
+  &__header {
+    border-top: 1px solid $neutral-60;
+    margin-top: 32px;
+    font-size: 24px;
+    line-height: 28px;
+    padding: 4px 0;
+    @include mq(tablet) {
+      font-size: 36px;
+      line-height: 40px;
+      padding: 4px 0 12px;
+    }
+    strong,
+    em {
+      display: block;
+      @include mq(mobileLandscape) {
+        display: inline;
+      }
+    }
+    strong {
+      font-weight: 700;
+      margin-right: 7px;
+    }
+    em {
+      font-weight: 300;
+      font-style: italic;
+    }
+  }
 
+  &__links {
+    display: flex;
+    flex-flow: row wrap;
+    @include mq(tablet) {
+      justify-content: space-between;
+    }
+    &__link {
+      width: 100%;
+      margin-top: 20px;
+      position: relative;
+      min-height: 156px;
+      padding-bottom: 32px;
+      @include mq(tablet) {
+        padding-bottom: 64px;
+        width: calc(50% - 10px);
+      }
+      @include mq(desktop) {
+        width: calc(33% - 10px);
+      }
+      @include mq(wide) {
+        width: calc(25% - 20px);
+      }
+      &:before {
+        content: '';
+        display: block;
+        width: 50%;
+        height: 1px;
+        background-color: $neutral-60;
+        margin-bottom: 4px;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 36px;
+        z-index: 0;
+        background: repeating-linear-gradient(
+          $neutral-86,
+          $neutral-86 1px,
+          rgba(255,0,0,0) 1px,
+          rgba(255,0,0,0) 5px,
+          $neutral-86 5px
+        );
+
+      }
+      .headline {
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 700;
+        text-indent: 1.4em;
+        position: relative;
+        &:before {
+          content: '“';
+          font-size: 3em;
+          position: absolute;
+          left: -0.47em;
+          top: 0.2em;
+        }
+      }
+      .byline {
+        margin-top: 2px;
+        font-size: 15px;
+        font-style: italic;
+        font-weight: 400;
+        width: 55%;
+        &__author {
+          color: #121212;
+        }
+        &__about {
+          color: #E05E00;
+        }
+      }
+      .picture {
+        display: none;
+        &[src] {
+          display: block;
+        }
+        position: absolute;
+        bottom: 0;
+        right: -16px;
+        width: 172px;
+        height: 144px;
+        z-index: 1;
+        @include mq(tablet) {
+          width: 224px;
+          height: 188px;
+        }
+      }
+      .more {
+        font-family: "Guardian Text Sans Web","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 34px;
+        padding: 0 16px 2px;
+        border: 1px solid #121212;
+        border-radius: 36px;
+        display: inline-block;
+        margin-top: 16px;
+        position: relative;
+        z-index: 1;
+      }
+      &:hover .more {
+        background-color: #121212;
+        color: #fff;
+      }
+      .link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 20;
+      }
+    }
+  }
 }
