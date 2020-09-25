@@ -5,7 +5,6 @@ loadJSON(jsonLink, function (rawData) {
   const linksEl = document.querySelector('.read-more__links');
   data.forEach((d) => {
     const articleEl = createArticleEl(d);
-    console.log(articleEl);
     linksEl.appendChild(articleEl);
   })
 });

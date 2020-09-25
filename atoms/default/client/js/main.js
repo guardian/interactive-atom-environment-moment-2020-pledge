@@ -1,4 +1,4 @@
-['structure-dom', 'copy-social-buttons', 'read-more'].forEach((n) => {
+['structure-dom', 'copy-social-buttons', 'read-more', 'sticky-header'].forEach((n) => {
   var el = document.createElement('script');
   el.src = '<%= atomPath %>/' + n + '.js';
   document.body.appendChild(el);
