@@ -1,26 +1,15 @@
-const shareData = {
-  title: "The Guardian’s environment pledge",
-  text: 'We want the Guardian to play a leading role in reporting on the environmental catastrophe',
-  url: 'https://www.theguardian.com',
-}
 
-if (canShare()) {
-  setupNativeShare();
-}
+setupNativeShare();
 
 function setupNativeShare() {
-  const shareEl = document.querySelector('.support-and-share__share__sheet');
-  if (shareEl) {
-    shareEl.classList.add('can-share');
-    shareEl.addEventListener('click', () => {
-      navigator.share(shareData);
-    })
+  const shareData = {
+    text: 'The Guardian’s environment pledge',
+    url: 'https://www.theguardian.com',
   }
-}
+  const shareEl = document.querySelector('.support-and-share__share__sheet');
 
-function canShare() {
-
-  // return true;
-
-  return navigator.canShare && navigator.canShare(shareData);
+  shareEl.addEventListener('click', () => {
+    console.log('tryign to share');
+    navigator.share(shareData);
+  })
 }
