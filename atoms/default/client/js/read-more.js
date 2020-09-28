@@ -2,11 +2,16 @@ const jsonLink = 'https://interactive.guim.co.uk/docsdata-test/1h3S_adTVe3zUjw6y
 
 loadJSON(jsonLink, function (rawData) {
   const data = rawData.sheets['Sheet1'];
-  const linksEl = document.querySelector('.read-more__links');
+  const readMoreEl = document.querySelector('.read-more');
+  const linksEl = readMoreEl.querySelector('.read-more__links');
   data.forEach((d) => {
     const articleEl = createArticleEl(d);
     linksEl.appendChild(articleEl);
-  })
+  });
+
+  if (data.length > 0) {
+    readMoreEl.classList.add('has-content')
+  }
 });
 
 
