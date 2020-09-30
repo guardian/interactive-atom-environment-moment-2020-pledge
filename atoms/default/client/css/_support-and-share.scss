@@ -39,6 +39,19 @@
     @include mq(tablet) {
       margin: 18px 0 24px;
     }
+
+    &.app {
+      display: none;
+    }
+    .ios &,
+    .android & {
+      &.app {
+        display: inline-block;
+      }
+      &.web {
+        display: none;
+      }
+    }
   }
 
   &__share {
