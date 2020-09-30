@@ -2,9 +2,12 @@ body {
   background-color: #041F4A;
   & > .element.element-atom:first-of-type {
     background-color: #fff;
-    padding-bottom: 100px;
-    border-bottom: 100px solid #052962;
+    padding-bottom: 140px;
     margin: 0;
+    @include mq(tablet) {
+      padding-bottom: 100px;
+      border-bottom: 100px solid #052962;
+    }
   }
 }
 
