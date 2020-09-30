@@ -66,6 +66,7 @@
       &__year {
         color: #333;
         line-height: 0.85;
+        font-size: 48px;
         @include mq(tablet) {
           font-size: 80px;
         }
