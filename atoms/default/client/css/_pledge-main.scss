@@ -23,8 +23,10 @@
     p, li {
       font-size: 17px;
       line-height: 24px;
-      margin-bottom: 24px;
       // max-width: 740px;
+    }
+    p {
+      margin-bottom: 24px;
     }
     ul {
       margin: 0;
@@ -36,12 +38,13 @@
       li {
         list-style-type: none;
         break-inside: avoid;
+        padding-bottom: 24px;
         &:before {
           content: '';
           display: block;
           width: 140px;
           height: 1px;
-          background-color: $neutral-60;
+          background-color: $neutral-86;
           margin-bottom: 6px;
           @include mq(tablet) {
             width: 50%;
