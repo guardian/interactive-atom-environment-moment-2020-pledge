@@ -44,9 +44,9 @@
       margin-top: 20px;
       position: relative;
       min-height: 156px;
-      padding-bottom: 40px;
+      padding-bottom: 54px;
       @include mq(tablet) {
-        padding-bottom: 64px;
+        padding-bottom: 78px;
         width: calc(50% - 10px);
       }
       @include mq(desktop) {
@@ -132,7 +132,7 @@
         border: 1px solid #121212;
         border-radius: 36px;
         display: inline-block;
-        margin-top: 16px;
+        margin-top: 5px;
         position: relative;
         z-index: 1;
       }
