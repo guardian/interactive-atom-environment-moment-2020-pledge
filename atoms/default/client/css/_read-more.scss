@@ -23,7 +23,7 @@
       }
     }
     strong {
-      font-weight: 700;
+      font-weight: 500;
       margin-right: 7px;
     }
     em {
@@ -83,15 +83,16 @@
       .headline {
         font-size: 20px;
         line-height: 24px;
-        font-weight: 700;
-        text-indent: 1.4em;
+        font-weight: 500;
+        text-indent: 1.3em;
         position: relative;
         &:before {
           content: '“';
           font-size: 3em;
           position: absolute;
           left: -0.47em;
-          top: 0.2em;
+          top: 0.22em;
+          font-weight: 700;
         }
       }
       .byline {
