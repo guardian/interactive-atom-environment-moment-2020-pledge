@@ -24,6 +24,16 @@
       font-size: 17px;
       line-height: 24px;
       // max-width: 740px;
+      a {
+        color: #C70000;
+        text-decoration-color: #999;
+        border-bottom: 1px solid #dcdcdc;
+        text-decoration: none;
+        &:hover {
+          border-bottom-color: #C70000;
+          text-decoration: none;
+        }
+      }
     }
     p {
       margin-bottom: 24px;
