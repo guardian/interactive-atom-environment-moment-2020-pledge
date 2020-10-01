@@ -45,9 +45,14 @@
     @include mq(tablet) {
       font-size: 64px;
       padding-top: 0;
+      margin-bottom: 68px;
     }
     @include mq(desktop) {
       font-size: 96px;
+      margin-bottom: 96px;
+    }
+    @include mq(leftCol) {
+      margin-bottom: 112px;
     }
     &__top {
       display: flex;
