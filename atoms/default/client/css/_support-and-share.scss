@@ -35,7 +35,8 @@
       text-decoration: none;
       background-color: #041F4A;
     }
-    @media screen and ( min-height: 720px ) {
+
+    @media screen and ( min-height: 630px ) {
       margin-bottom: 40px;
     }
     @include mq(tablet) {
