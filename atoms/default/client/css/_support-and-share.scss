@@ -66,7 +66,7 @@
     &__sheet {
       display: block;
       position: absolute;
-      left: 218px;
+      left: 216px;
       top: 8px;
       padding: 0 12px;
       height: 36px;
@@ -75,6 +75,10 @@
       border-radius: 36px;
       @include mq(mobileMedium) {
         padding: 0 18px 0 14px;
+        left: 220px;
+      }
+      @include mq(mobileLandscape) {
+        left: 232px;
       }
       @include mq(tablet) {
         display: none;
