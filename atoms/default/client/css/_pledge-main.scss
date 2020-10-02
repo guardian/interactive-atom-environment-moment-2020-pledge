@@ -29,6 +29,7 @@
     p, li {
       font-size: 17px;
       line-height: 24px;
+      max-width: 640px;
       a {
         color: #CB4700;
         text-decoration-color: #999;
@@ -42,7 +43,6 @@
     }
     p {
       margin-bottom: 18px;
-      max-width: 640px;
       &:first-of-type,
       &:nth-child(5) {
         font-weight: bold;
