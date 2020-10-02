@@ -1,8 +1,9 @@
 .read-more {
   font-family: "Guardian Headline", "Guardian Egyptian Web", Georgia;
-  display: none;
   &.has-content {
-    display: block;
+    .placeholder {
+      display: none;
+    }
   }
   &__header {
     border-top: 1px solid $neutral-86;
@@ -54,6 +55,9 @@
       }
       @include mq(wide) {
         width: calc(25% - 20px);
+      }
+      &.placeholder {
+        opacity: 0.01;
       }
       &:before {
         content: '';
