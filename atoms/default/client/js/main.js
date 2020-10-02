@@ -1,3 +1,4 @@
+console.log('1131');
 ['structure-dom', 'copy-social-buttons', 'read-more', 'sticky-header', 'native-share'].forEach((n) => {
   var el = document.createElement('script');
   el.src = '<%= atomPath %>/' + n + '.js';

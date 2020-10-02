@@ -4,11 +4,16 @@
 // Pull content
 function pullContentIntoAtom() {
   const elAll = contentElements(['p', 'ul']);
+
   if (elAll.length > 0) {
+    console.log('DOM re-structiring', elAll);
     const moveTarget = document.querySelector('body > .element-atom .pledge-main__content');
     elAll.forEach((el) => {
+      console.log('pulling', el)
       moveTarget.appendChild(el);
     })
+  } else {
+    console.log('DOM ready');
   }
 }
 
