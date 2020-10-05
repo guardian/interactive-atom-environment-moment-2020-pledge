@@ -44,7 +44,7 @@
     p {
       margin-bottom: 16px;
     }
-    p:first-of-type,
+    p:nth-child(3),
     ul + p {
       font-weight: bold;
     }
