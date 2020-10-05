@@ -91,7 +91,7 @@
           width: 140px;
           height: 1px;
           background-color: $neutral-86;
-          margin-bottom: 6px;
+          margin-bottom: 3px;
           @include mq(tablet) {
             width: 50%;
           }
@@ -108,7 +108,7 @@
           }
         }
         br {
-          line-height: 36px;
+          line-height: 38px;
         }
       }
     }
