@@ -84,7 +84,7 @@
       li {
         list-style-type: none;
         break-inside: avoid;
-        padding-bottom: 24px;
+        padding-bottom: 32px;
         &:before {
           content: '';
           display: block;
@@ -102,10 +102,13 @@
           font-weight: 700;
           font-size: 20px;
           line-height: 135%;
-          margin-bottom: 6px;
+          margin-bottom: 9px;
           @include mq(tablet) {
             font-size: 24px;
           }
+        }
+        br {
+          line-height: 36px;
         }
       }
     }
