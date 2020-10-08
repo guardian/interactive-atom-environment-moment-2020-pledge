@@ -46,10 +46,18 @@
       font-size: 64px;
       padding-top: 0;
       margin-bottom: 68px;
+      .ios &,
+      .android & {
+        margin-bottom: 120px;
+      }
     }
     @include mq(desktop) {
       font-size: 96px;
       margin-bottom: 96px;
+      .ios &,
+      .android & {
+        margin-bottom: 160px;
+      }
     }
     @include mq(leftCol) {
       margin-bottom: 112px;
@@ -119,15 +127,28 @@
 
 
   }
+
+
+  &__button,
   &__social {
     display: none;
     @include mq(tablet) {
-      display: block;
+      display: inline-block;
+      vertical-align: bottom;
       .ios &,
       .android & {
         display: none;
       }
     }
+  }
+
+  &__button {
+    a {
+      margin: 11px 16px 9px 0;
+    }
+  }
+
+  &__social {
   }
 
 }
