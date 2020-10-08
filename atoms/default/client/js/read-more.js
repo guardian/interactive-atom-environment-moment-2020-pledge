@@ -18,7 +18,7 @@ loadJSON(jsonLink, function (rawData) {
 function createArticleEl(data) {
   let articleEl = document.createElement('div');
   articleEl.classList.add('read-more__links__link');
-  articleEl.innerHTML = `<div class="headline">${data.Headline}</div><div class="byline"><div class="byline__author">${data.Author}</div><div class="byline__about">${data.Title}</div></div><img class="picture"><div class="more">Read more</div><a class="link" href='${data.Link}'></a>`;
+  articleEl.innerHTML = `<div class="headline">${data.Headline}</div><div class="byline"><div class="byline__author">${data.Author}</div><div class="byline__about">${data.Title}</div></div><img class="picture"><div class="more">Read more</div><a class="link" target="_new" href='${data.Link}'></a>`;
 
   if (data.Photo) {
     articleEl.querySelector('img').setAttribute('src', data.Photo);
