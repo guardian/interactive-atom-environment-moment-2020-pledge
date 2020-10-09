@@ -7,19 +7,39 @@
   }
   &__header {
     border-top: 1px solid $neutral-86;
-    margin-top: 32px;
     font-size: 24px;
     line-height: 28px;
     padding: 4px 0;
     @include mq(tablet) {
-      font-size: 36px;
-      line-height: 40px;
       padding: 4px 0 12px;
+      border-top: 0;
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -20px;
+        right: -20px;
+        height: 1px;
+        background-color: $neutral-86;
+      }
+    }
+    @include mq(leftCol) {
+      padding-top: 8px;
+    }
+    @include mq($from: leftCol, $until: wide) {
+      font-size: 19px;
+      line-height: 23px;
+      padding-top: 12px;
+      strong,
+      em {
+        margin-left: -3px;
+      }
     }
     strong,
     em {
       display: block;
-      @include mq(mobileLandscape) {
+      @include mq($from:mobileLandscape, $until: leftCol) {
         display: inline;
       }
     }
@@ -39,6 +59,16 @@
     flex-flow: row wrap;
     @include mq(tablet) {
       justify-content: space-between;
+      padding-bottom: 80px;
+    }
+    @include mq(leftCol) {
+      padding-left: 160px;
+      margin-top: -82px;
+    }
+    @include mq(wide) {
+      padding-left: 240px;
+      padding-right: 80px;
+      margin-top: -90px;
     }
     &__link {
       width: 100%;
@@ -48,24 +78,13 @@
       padding-bottom: 54px;
       @include mq(tablet) {
         padding-bottom: 78px;
-        width: calc(50% - 10px);
+        width: calc(50% - 12px);
       }
       @include mq(desktop) {
-        width: calc(33% - 10px);
-      }
-      @include mq(wide) {
-        width: calc(25% - 20px);
+        width: calc(50% - 20px);
       }
       &.placeholder {
         opacity: 0.01;
-      }
-      &:before {
-        content: '';
-        display: block;
-        width: 50%;
-        height: 1px;
-        background-color: $neutral-86;
-        margin-bottom: 4px;
       }
       &:after {
         content: '';
@@ -90,13 +109,20 @@
         font-weight: 500;
         text-indent: 1.3em;
         position: relative;
+        @include mq(tablet) {
+          font-size: 24px;
+          line-height: 32px;
+        }
         &:before {
           content: '“';
-          font-size: 3em;
+          font-size: 2.8em;
           position: absolute;
           left: -0.47em;
-          top: 0.22em;
+          top: 0.18em;
           font-weight: 700;
+          @include mq(tablet) {
+            top: 0.22em;
+          }
         }
       }
       .byline {
@@ -110,6 +136,11 @@
         }
         &__about {
           color: #E05E00;
+        }
+        @include mq(tablet) {
+          font-size: 17px;
+          line-height: 21px;
+          font-weight: 400;
         }
       }
       .picture {
@@ -126,6 +157,9 @@
         @include mq(tablet) {
           width: 224px;
           height: 188px;
+        }
+        @include mq(desktop) {
+          right: 0;
         }
       }
       .more {

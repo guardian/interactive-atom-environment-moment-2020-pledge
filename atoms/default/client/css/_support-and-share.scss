@@ -54,7 +54,7 @@
     @include mq(leftCol) {
       margin-left: 160px;
       position: relative;
-      &:before {
+      .support-and-share &:before {
         content: '';
         position: absolute;
         left: -20px;
@@ -83,11 +83,19 @@
     }
 
     svg {
+      display: none;
+      @include mq(tablet) {
+        display: inline;
+      }
       position: relative;
       top: 5px;
       left: 8px;
       margin-right: 4px;
+      // transition: transform 300ms ease-in-out;
     }
+    // &:hover svg {
+    //   transform: translateX(3px);
+    // }
   }
 
   &__share {
