@@ -154,10 +154,10 @@
     a {
       margin: 0 16px 5px 0;
       @include mq(leftCol) {
-        margin-left: 140px;
+        margin-left: 160px;
       }
       @include mq(wide) {
-        margin-left: 220px;
+        margin-left: 240px;
       }
     }
   }

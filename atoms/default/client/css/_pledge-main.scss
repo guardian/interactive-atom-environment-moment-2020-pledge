@@ -2,34 +2,57 @@
   margin-top: 24px;
   min-height: 50vh;
 
+  @include mq(tablet) {
+    margin-top: 0;
+  }
+
   &__content {
     position: relative;
     padding-top: 24px;
-    padding-top: 0px;
-    &:before {
+    padding-top: 10px;
+    @include mq(leftCol) {
+      padding-left: 160px;
+    }
+    @include mq(wide) {
+      padding-left: 240px;
+    }
+
+    &:before,
+    &:after {
       content: '';
       position: absolute;
       top: 0;
+      background-color: $neutral-86;
+    }
+
+    &:after {
+      display: none;
+      left: 140px;
+      bottom: 0;
+      width: 1px;
+      @include mq(leftCol) {
+        display: block;
+      }
+      @include mq(wide) {
+        left: 220px;
+      }
+    }
+
+    &:before {
       left: 0;
       right: 0;
-      height: 16px;
-        height: 1px;
-        top: -6px;
-      background: repeating-linear-gradient(
-        $neutral-86,
-        $neutral-86 1px,
-        rgba(255,0,0,0) 1px,
-        rgba(255,0,0,0) 5px,
-        $neutral-86 5px
-      );
-      // $neutral-86
+      height: 1px;
+      @include mq(tablet) {
+        left: -20px;
+        right: -20px;
+      }
     }
 
 
     p, li {
       font-size: 17px;
       line-height: 24px;
-      max-width: 640px;
+      max-width: 620px;
       a {
         color: #CB4700;
         text-decoration-color: #999;
@@ -53,10 +76,10 @@
       margin: 32px 0 12px;
       padding: 40px 0 40px;
       position: relative;
-      &:before,
-      &:after {
+      &:before {
         content: '';
         position: absolute;
+        top: 0;
         left: 0;
         right: 0;
         height: 16px;
@@ -67,35 +90,16 @@
           rgba(255,0,0,0) 5px,
           #CB4700 5px
         );
-        // $neutra86
-      }
-      &:before {
-        top: 0;
-      }
-      &:after {
-        bottom: 0;
+        @include mq(tablet) {
+          width: 640px;
+        }
       }
 
 
-      @include mq(desktop) {
-        column-count: 2;
-        column-gap: 40px;
-      }
       li {
         list-style-type: none;
         break-inside: avoid;
-        padding-bottom: 32px;
-        &:before {
-          content: '';
-          display: block;
-          width: 140px;
-          height: 1px;
-          background-color: $neutral-86;
-          margin-bottom: 3px;
-          @include mq(tablet) {
-            width: 50%;
-          }
-        }
+        padding-bottom: 24px;
         strong {
           font-family: "Guardian Headline", "Guardian Egyptian Web", Georgia;
           display: block;
