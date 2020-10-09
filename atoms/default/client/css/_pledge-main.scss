@@ -1,9 +1,11 @@
 .pledge-main {
   margin-top: 24px;
   min-height: 50vh;
+  padding-bottom: 32px;
 
   @include mq(tablet) {
     margin-top: 0;
+    padding-bottom: 0;
   }
 
   &__content {
@@ -100,9 +102,13 @@
 
     ul {
       margin: 32px 0 12px;
-      padding: 40px 0 12px;
+      padding: 40px 0 20px;
       position: relative;
-      &:before {
+      @include mq(tablet) {
+        padding-bottom: 12px;
+      }
+      &:before,
+      &:after {
         content: '';
         position: absolute;
         top: 0;
@@ -118,6 +124,14 @@
         );
         @include mq(tablet) {
           width: 640px;
+        }
+      }
+
+      &:after {
+        bottom: 0;
+        top: auto;
+        @include mq(tablet) {
+          display: none;
         }
       }
 
