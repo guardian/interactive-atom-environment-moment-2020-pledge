@@ -137,8 +137,10 @@
             font-size: 24px;
           }
         }
-        br {
-          line-height: 38px;
+        .br {
+          display: block;
+          height: 0;
+          margin-top: -10px;
         }
       }
     }
