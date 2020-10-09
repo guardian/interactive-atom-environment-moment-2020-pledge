@@ -27,6 +27,23 @@ body {
       width: 700px;
       // padding: 0;
       margin: 0 auto;
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background-color: $neutral-86;
+      }
+      &:before {
+        left: 0;
+      }
+      &:after {
+        right: 0;
+      }
+
     }
     @include mq(desktop) {
       width: 940px;

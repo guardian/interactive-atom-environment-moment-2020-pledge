@@ -1,6 +1,11 @@
 .pledge-header {
   max-width: 100%;
   overflow: hidden;
+  &__inner {
+    @include mq(tablet) {
+      padding-bottom: 8px;
+    }
+  }
   &__earth {
     width: 620px;
     height: 620px;
@@ -123,11 +128,14 @@
         rgba(0,0,0,0) calc(1.15em + 1px)
       );
 
+      @include mq(tablet) {
+        left: -20px;
+      }
+
     }
 
 
   }
-
 
   &__button,
   &__social {
@@ -145,6 +153,12 @@
   &__button {
     a {
       margin: 0 16px 5px 0;
+      @include mq(leftCol) {
+        margin-left: 140px;
+      }
+      @include mq(wide) {
+        margin-left: 220px;
+      }
     }
   }
 
