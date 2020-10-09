@@ -72,6 +72,32 @@
       font-weight: bold;
     }
 
+    @include mq(tablet) {
+      ul ~ p {
+        position: relative;
+        &:after {
+          content: '';
+          position: absolute;
+          top: -16px;
+          right: -21px;
+          bottom: 0;
+          width: 1px;
+          background-color: $neutral-86;
+        }
+      }
+      ul + p {
+        &:before {
+          content: '';
+          position: absolute;
+          top: -16px;
+          right: -21px;
+          left: -20px;
+          height: 1px;
+          background-color: $neutral-86;
+        }
+      }
+    }
+
     ul {
       margin: 32px 0 12px;
       padding: 40px 0 40px;

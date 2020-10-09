@@ -12,6 +12,9 @@
     background-color: transparent;
     // box-shadow: none;
     border-top: 0;
+    &__inner {
+      padding-bottom: 80px;
+    }
   }
 
   &__support,
@@ -47,7 +50,23 @@
       &:hover {
         background-color: #F3C100;
       }
+    }
+    @include mq(leftCol) {
+      margin-left: 160px;
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        left: -20px;
+        top: -22px;
+        bottom: -120px;
+        width: 1px;
+        background-color: $neutral-86;
+      }
+    }
 
+    @include mq(wide) {
+      margin-left: 240px;
     }
 
     &.app {
@@ -62,13 +81,61 @@
         display: none;
       }
     }
+
+    svg {
+      position: relative;
+      top: 5px;
+      left: 8px;
+      margin-right: 4px;
+    }
   }
 
   &__share {
+    display: inline-block;
+    @include mq(tablet) {
+      padding-top: 4px;
+      padding-bottom: 20px;
+      &:before,
+      &:after {
+        content: '';
+        display: block;
+        background-color: $neutral-86;
+        position: absolute;
+      }
+      &:before {
+        left: 660px;
+        width: 1px;
+        bottom: 80px;
+        top: 0;
+        @include mq(leftCol) {
+          left: 820px;
+        }
+
+        @include mq(wide) {
+          left: 900px;
+        }
+
+      }
+      &:after {
+        width: 660px;
+        height: 1px;
+        left: 0;
+        top: auto;
+        bottom: 80px;
+        @include mq(leftCol) {
+          left: 160px;
+        }
+        @include mq(wide) {
+          left: 240px;
+        }
+      }
+    }
     &__icons {
       display: none;
       @include mq(tablet) {
-        display: block;
+        display: inline-block;
+        margin: 12px 0 15px 18px;
+        vertical-align: middle;
       }
     }
     &__sheet {
